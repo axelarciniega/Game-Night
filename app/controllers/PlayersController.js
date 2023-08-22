@@ -16,7 +16,6 @@ export class PlayersController {
 
     scorePoint(){
         console.log('clicked')
-        
     }
 
 }
