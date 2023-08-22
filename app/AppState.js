@@ -1,7 +1,9 @@
+import { Player } from "./models/player.js"
 import { Value } from "./models/Value.js"
 import { EventEmitter } from "./utils/EventEmitter.js"
 import { isValidProp } from "./utils/isValidProp.js"
 import { loadState } from "./utils/Store.js"
+
 
 class ObservableAppState extends EventEmitter {
   page = ''
@@ -9,9 +11,20 @@ class ObservableAppState extends EventEmitter {
   /** @type {import('./models/Value.js').Value[]} */
   values = loadState('values', [Value])
 
+players = [new Player('Peso'),new Player('Eslabon'), new Player ('Junior')
+];
+
+
+
+
+
+
+
+
+
   // NOTE Used to load initial data
   init() {
-
+    console.log(this.players)
   }
 
 }
